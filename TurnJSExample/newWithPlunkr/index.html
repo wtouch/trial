@@ -9,28 +9,11 @@
     <script src="app.js"></script>
   </head>
 
-  <body>
+  <body ng-controller="next">
     <h1>These links work if total number of pages <= 6, but now they work only for the 'first time' while traversing to the 7th page</h1>
-     <flipbook></flipbook> 
-	<!--<div id="flipbook" class="flipbook">
-  <div class="hard"> Turn.js </div> 
-  <div class="hard"></div>
-  <div> Page 1 </div>
-  <div> Page 2 </div>
-  <div> Page 3 </div>
-  <div> Page 4 </div>
-  <div class="hard"></div>
-  <div class="hard"></div>
-</div>-->
+    <button ng-click="next()">Next</button>, | 
+    <button ng-click="addPage('flipbook')">Add</button><br>
+    <flipbook></flipbook>
   </body>
 
-  
-  <script>
-  
-	$("#flipbook").turn({
-		width: 400,
-		height: 300,
-		autoCenter: true
-	});
-</script>
 </html>

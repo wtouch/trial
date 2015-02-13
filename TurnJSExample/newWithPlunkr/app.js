@@ -4,27 +4,7 @@ test.directive('flipbook', function(){
   return{
     restrict: 'E',
     replace: true,
-    controller: function($scope){
-      angular.element(".flipbook").turn({
-          when: {
-								turning: function(e, page, view) {
-
-									// Gets the range of pages that the book needs right now
-									var range = $(this).turn('range', page);
-
-									// Check if each page is within the book
-									for (page = range[0]; page<=range[1]; page++) 
-										//addPage(page, $(this));
-										console.log(page);
-
-								},
-
-								turned: function(e, page) {
-									$('#page-number').val(page);
-								}
-							}
-        })
-    },
+    
     compile: function(element, attrs){
       element.turn({
         width: '300px',
